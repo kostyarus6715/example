@@ -1,4 +1,4 @@
-
+version: '3.8'
 services:
   app:
     build:
@@ -6,8 +6,6 @@ services:
       dockerfile: Dockerfile
     image: laravel-app
     container_name: laravel-app
-    ports:
-      - "9000:9000"
     volumes:
       - .:/var/www
     networks:
@@ -25,6 +23,17 @@ services:
       POSTGRES_PASSWORD: postgres
     volumes:
       - db_data:/var/lib/postgresql/data
+    networks:
+      - laravel-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - "8000:80"  # Порт, на котором будет доступен Nginx
+    volumes:
+      - .:/var/www
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf  # Конфигурация Nginx
     networks:
       - laravel-network
 

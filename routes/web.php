@@ -39,4 +39,4 @@ Route::put('/calls/{call}', [CallController::class, 'update'])->name('calls.upda
 Route::delete('/calls/{call}', [CallController::class, 'destroy'])->name('calls.destroy');
 
 
-Route::get('/conversations', 'ConversationController@index')->name('conversations.index');
+//Route::get('/conversations', 'ConversationController@index')->name('conversations.index');

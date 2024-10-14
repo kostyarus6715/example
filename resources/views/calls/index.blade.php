@@ -28,8 +28,11 @@
                     <button type="submit" class="btn btn-primary btn-sm">Применить фильтр</button>
                     <a href="{{ route('calls.index') }}" class="btn btn-secondary btn-sm ml-2">Сбросить фильтр</a>
                 </form>
+                <div class="mt-3"> <!-- Добавляем новый контейнер для кнопок -->
+                    <a href="{{ route('calls.create') }}" class="btn btn-primary">Добавить новый разговор</a>
+                    <a href="{{ route('calls.report') }}" class="btn btn-secondary ml-2">Отчет по звонкам</a>
+                </div>
             </div>
-            <a href="{{ route('calls.create') }}" class="btn btn-primary mt-3">Добавить новый разговор</a>
             <table class="table table-striped mt-3">
                 <thead>
                 <tr>

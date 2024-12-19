@@ -7,8 +7,8 @@
                 <h1 class="mb-0">Список телефонных разговоров</h1>
             </div>
             <div class="card-body">
-                <button id="toggleFilters" class="btn btn-primary mb-3">Показать фильтры</button> <!-- Добавляем кнопку "Показать фильтры" -->
-                <form action="{{ route('calls.index') }}" method="GET" class="form-inline" id="filtersPanel" style="display: none;"> <!-- Добавляем атрибут id="filtersPanel" и стиль display: none; для панели с фильтрами -->
+                <button id="toggleFilters" class="btn btn-primary mb-3">Показать фильтры</button> 
+                <form action="{{ route('calls.index') }}" method="GET" class="form-inline" id="filtersPanel" style="display: none;"> 
                     <div class="form-group mr-2">
                         <label for="caller" class="mr-2">Звонящий:</label>
                         <input type="text" id="caller" name="caller" class="form-control form-control-sm" value="{{ request('caller') }}">
@@ -28,7 +28,7 @@
                     <button type="submit" class="btn btn-primary btn-sm">Применить фильтр</button>
                     <a href="{{ route('calls.index') }}" class="btn btn-secondary btn-sm ml-2">Сбросить фильтр</a>
                 </form>
-                <div class="mt-3"> <!-- Добавляем новый контейнер для кнопок -->
+                <div class="mt-3"> 
                     <a href="{{ route('calls.create') }}" class="btn btn-primary">Добавить новый разговор</a>
                     <a href="{{ route('calls.report') }}" class="btn btn-secondary ml-2">Отчет по звонкам</a>
                 </div>

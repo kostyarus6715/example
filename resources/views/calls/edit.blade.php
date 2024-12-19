@@ -26,8 +26,6 @@
                         <label for="date">Дата</label>
                         <input type="date" id="date" name="date" class="form-control" value="{{ $call->date }}" required>
                     </div>
-
-                    <!-- Вывод текущего файла записи -->
                     <div class="form-group">
                         <label for="current_audio_file">Текущий файл записи</label><br>
                         @if($call->audio_file)
@@ -39,7 +37,6 @@
                             <p>Файл записи отсутствует</p>
                         @endif
                     </div>
-                    <!-- Загрузка нового файла записи -->
                     <div class="form-group">
                         <label for="new_audio_file">Выберите новый файл записи</label>
                         <input type="file" name="new_audio_file" class="form-control">

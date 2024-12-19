@@ -30,7 +30,6 @@
                         <label for="date">Дата</label>
                         <input type="date" class="form-control" id="date" name="date" required>
                     </div>
-                    <!-- Загрузка файла записи -->
                     <div class="form-group">
                         <label for="audio_file">Выберите файл записи</label>
                         <input type="file" name="audio_file" class="form-control-file" required>
